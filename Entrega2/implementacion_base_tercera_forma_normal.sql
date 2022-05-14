@@ -139,4 +139,29 @@ REFERENCES public."user" (id) MATCH FULL
 ON DELETE CASCADE ON UPDATE CASCADE;
 -- ddl-end --
 
+ALTER TABLE neighbourhood
+ALTER COLUMN name TYPE character varying(70);
 
+ALTER TABLE neighbourhood
+ALTER COLUMN city TYPE character varying(70);
+
+ALTER TABLE comment
+ALTER COLUMN comment TYPE character varying(10000);
+
+ALTER TABLE listings
+ALTER COLUMN description TYPE character varying(10000);
+
+ALTER TABLE listings
+ALTER COLUMN coordinates TYPE character varying(70);
+
+ALTER TABLE listings
+ALTER COLUMN name TYPE character varying(200);
+
+ALTER TABLE host
+ALTER COLUMN name TYPE character varying(200);
+
+ALTER TABLE usser
+ALTER COLUMN name TYPE character varying(200);
+
+ALTER TABLE comment
+ALTER COLUMN id_comment TYPE numeric;
